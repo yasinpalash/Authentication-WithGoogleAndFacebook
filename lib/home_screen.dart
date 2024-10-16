@@ -7,7 +7,19 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: Text("Home"),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text("Home"),
+            SizedBox(height: 50,),
+            GestureDetector(
+              onTap: (){
+               Navigator.pop(context);
+              },
+                child: Text("Back")),
+          ],
+        ),
       ),
     );
   }
